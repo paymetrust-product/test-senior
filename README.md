@@ -56,32 +56,29 @@ Gestion des rôles et autorisations : Une autorisation d'administrateur est requ
 Installation
 Clonez le dépôt GitHub :
 
-bash
 
-git clone <URL_DU_REPOSITORY>
-Installez les dépendances :
 
-bash
+-git clone https://github.com/japhs99/test-senior.git
+-Installez les dépendances :
 
 npm install
-Configurez la base de données PostgreSQL en créant une base de données et en configurant les paramètres de connexion dans le fichier config.js.
 
-Exécutez les migrations pour créer les tables de base de données :
+-Configurez la base de données PostgreSQL en créant une base de données et en configurant les paramètres de connexion dans le fichier config.js.
 
-bash
-
+-Exécutez les migrations pour créer les tables de base de données :
 npx sequelize-cli db:migrate
-Lancez l'application :
 
-bash
 
+-Lancez l'application :
 npm start
+
+
 L'application sera accessible à l'adresse http://localhost:3000.
 
 Tests
 Pour exécuter les tests unitaires, utilisez la commande suivante :
 
-bash
+
 
 npm test
 Les tests sont écrits à l'aide du framework Jest et couvrent différentes fonctionnalités de l'application pour garantir la stabilité et la qualité du code.
@@ -94,7 +91,7 @@ Si vous souhaitez contribuer à l'amélioration de l'application, vous pouvez su
 
 Créez une branche à partir de la branche main :
 
-bash
+
 
 git checkout -b feature/nom-de-la-fonctionnalité
 Effectuez les modifications nécessaires.

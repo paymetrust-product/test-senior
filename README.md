@@ -30,7 +30,7 @@ Vous pouvez utiliser `Talwindcss` ou `Bootstrap` pour le style.
 - Gestion des rôles et permissions
 
 
-## Application blog 
+# Application blog 
 
 ## Backend
 
@@ -60,17 +60,20 @@ Clonez le dépôt GitHub :
 
 -git clone https://github.com/japhs99/test-senior.git
 -Installez les dépendances :
-
+```
 npm install
-
+```
 -Configurez la base de données PostgreSQL en créant une base de données et en configurant les paramètres de connexion dans le fichier config.js.
 
 -Exécutez les migrations pour créer les tables de base de données :
+```
 npx sequelize-cli db:migrate
-
+```
 
 -Lancez l'application :
+```
 npm start
+```
 
 
 L'application sera accessible à l'adresse http://localhost:3000.
@@ -79,24 +82,12 @@ Tests
 Pour exécuter les tests unitaires, utilisez la commande suivante :
 
 
-
+```
 npm test
+```
 Les tests sont écrits à l'aide du framework Jest et couvrent différentes fonctionnalités de l'application pour garantir la stabilité et la qualité du code.
 
-Logging
+### Logging
 L'application utilise la bibliothèque Winston pour la gestion des journaux. Les journaux sont enregistrés dans des fichiers dans le dossier logs. Vous pouvez configurer les niveaux de journalisation et les destinations de journalisation dans le fichier config.js.
 
-Contribuer
-Si vous souhaitez contribuer à l'amélioration de l'application, vous pouvez suivre les étapes suivantes :
-
-Créez une branche à partir de la branche main :
-
-
-
-git checkout -b feature/nom-de-la-fonctionnalité
-Effectuez les modifications nécessaires.
-
-Testez votre code avec des tests unitaires appropriés.
-
-Soumettez une demande d'extraction (pull request) en fournissant une description détaillée des modifications apportées.
 

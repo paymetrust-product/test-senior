@@ -1,16 +1,20 @@
+const { Op } = require('sequelize');
 const Article = require('../models/Article');
+const Comment = require('../models/Comment');
+const sequelize = require('../database');
+const logger = require('../utils/logger');
 
-async function getAllArticles(req, res) {
+async function getAllArticles(req, res, next) {
   try {
     const articles = await Article.findAll();
     res.json(articles);
   } catch (error) {
-    console.error(error);
-    res.sendStatus(500);
+    logger.error(error);
+    next(error);
   }
 }
 
-async function getArticleById(req, res) {
+async function getArticleById(req, res, next) {
   const { id } = req.params;
 
   try {
@@ -19,27 +23,34 @@ async function getArticleById(req, res) {
       return res.sendStatus(404);
     }
 
-    res.json(article);
+    const comments = await Comment.findAll({ where: { articleId: id } });
+
+    res.json({ article, comments });
   } catch (error) {
-    console.error(error);
-    res.sendStatus(500);
+    logger.error(error);
+    next(error);
   }
 }
 
-async function createArticle(req, res) {
+async function createArticle(req, res, next) {
   const { title, content } = req.body;
   const author = req.user.username;
 
   try {
-    const article = await Article.create({ title, content, author });
+    const article = await sequelize.transaction(async (transaction) => {
+      const createdArticle = await Article.create({ title, content, author }, { transaction });
+
+      return createdArticle;
+    });
+
     res.status(201).json(article);
   } catch (error) {
-    console.error(error);
-    res.sendStatus(500);
+    logger.error(error);
+    next(error);
   }
 }
 
-async function updateArticle(req, res) {
+async function updateArticle(req, res, next) {
   const { id } = req.params;
   const { title, content } = req.body;
 
@@ -53,12 +64,12 @@ async function updateArticle(req, res) {
     const updatedArticle = await Article.findByPk(id);
     res.json(updatedArticle);
   } catch (error) {
-    console.error(error);
-    res.sendStatus(500);
+    logger.error(error);
+    next(error);
   }
 }
 
-async function deleteArticle(req, res) {
+async function deleteArticle(req, res, next) {
   const { id } = req.params;
 
   try {
@@ -70,8 +81,8 @@ async function deleteArticle(req, res) {
 
     res.sendStatus(204);
   } catch (error) {
-    console.error(error);
-    res.sendStatus(500);
+    logger.error(error);
+    next(error);
   }
 }
 

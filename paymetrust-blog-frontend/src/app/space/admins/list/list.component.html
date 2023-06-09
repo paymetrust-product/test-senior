@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h1>List of Roles</h1>
+  <button class="btn btn-primary mb-3" (click)="createNewAdmin()">Create New Admin</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Role</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let admin of admins">
+        <td>{{ admin.username }}</td>
+        <td>
+          <span class="badge text-bg-primary">
+            {{ admin.role.label }}
+          </span>
+        </td>
+        <td>
+          <button class="btn btn-primary m-1" (click)="editAdmin(admin.id)" [disabled]="adminsListViewModel.checkAdminDeleteInProgress(admin.id)">Update</button>
+          <button class="btn btn-danger m-1" (click)="deleteAdmin(admin.id)" [disabled]="adminsListViewModel.checkAdminDeleteInProgress(admin.id)">{{ adminsListViewModel.checkAdminDeleteInProgress(admin.id) ? 'progress...' : 'Delete' }}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

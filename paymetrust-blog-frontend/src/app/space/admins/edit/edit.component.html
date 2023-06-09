@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <form *ngIf="adminForm" [formGroup]="adminForm">
+        <div class="form-group m-3">
+          <label for="adminUsername">Username</label>
+          <input
+            id="adminUsername"
+            class="form-control"
+            type="text"
+            formControlName="username"
+            name="adminUsername"
+            required
+          />
+        </div>
+        <div class="form-group m-3">
+          <label for="adminRole">Role</label>
+          <select id="adminRole"formControlName="role" class="form-select" aria-label="Default select example">
+            <option *ngFor="let role of adminFormViewModel.roles" [value]="role.id" [selected]="role.id === admin?.role?.id">{{ role.label }}</option>
+          </select>
+        </div>
+        <div class="form-group m-3">
+          <label for="adminPassword">Password</label>
+          <input
+            id="adminPassword"
+            class="form-control"
+            type="password"
+            formControlName="password"
+            name="adminPassword"
+          />
+        </div>
+        <div class="form-group m-3">
+          <label for="adminConfirmPassword">Confirmation Password</label>
+          <input
+            id="adminConfirmPassword"
+            class="form-control"
+            type="password"
+            formControlName="confirmPassword"
+            name="adminConfirmPassword"
+          />
+        </div>
+
+        <button class="btn btn-primary" [disabled]="adminForm.invalid || !checkPaasswordConfirmation()" (click)="submit()">
+          {{ adminFormViewModel.getActionTitle() }}
+        </button>
+
+        <button class="btn btn-secondary m-3" (click)="goBack()">
+          Go Back
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

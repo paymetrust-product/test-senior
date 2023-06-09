@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <h1>List of Roles</h1>
+  <button class="btn btn-primary mb-3" (click)="createNewRole()">Create New Role</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Role Name</th>
+        <th>Permissions</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let role of roles">
+        <td>{{ role.label }}</td>
+        <td>
+          <span *ngFor="let permission of role.permissions" class="badge text-bg-primary">
+            {{ permission.name.replace("_", " ") }}
+          </span>
+        </td>
+        <td>
+          <button class="btn btn-primary m-1" (click)="editRole(role.id)" [disabled]="rolesListViewModel.checkRoleDeleteInProgress(role.id)">Update</button>
+          <button class="btn btn-danger m-1" (click)="deleteRole(role.id)" [disabled]="rolesListViewModel.checkRoleDeleteInProgress(role.id)">{{ rolesListViewModel.checkRoleDeleteInProgress(role.id) ? 'progress...' : 'Delete' }}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

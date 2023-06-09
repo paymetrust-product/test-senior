@@ -1,0 +1,98 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id                    Int @id @default(autoincrement())
+  username              String @db.VarChar(45)
+  password              String @db.VarChar(255)
+  createdAt             DateTime @default(now()) @map("created_at")
+  role                  Role @relation("role", fields: [roleId], references: [id])
+  roleId                Int @map("role_id")
+  createdRoles          Role[] @relation("creator")
+  articles              Article[]
+  @@map("admins")
+}
+
+model Role {
+  id                    Int @id @default(autoincrement())
+  label                 String @db.VarChar(45) @unique
+  createdAt             DateTime @default(now()) @map("created_at")
+  admins                Admin[] @relation("role")
+  creator               Admin @relation("creator", fields: [createdBy], references: [id])
+  createdBy             Int @map("created_by")
+  permissions           RolesPermissions[]
+  @@map("roles")
+}
+
+model Permission {
+  id                    Int @id @default(autoincrement())
+  name                  PermissionType
+  roles                 RolesPermissions[]
+  @@map("permissions")
+}
+
+model RolesPermissions {
+  id                    Int @id @default(autoincrement())
+  role                  Role @relation(fields: [roleId], references: [id])
+  roleId                Int @map("role_id")
+  permission            Permission @relation(fields: [permissionId], references: [id])
+  permissionId          Int @map("permission_id")
+  attachedAt            DateTime @default(now()) @map("attached_at")
+  @@map("roles_permissions")
+}
+
+model Article {
+  id                    Int @id @default(autoincrement())
+  title                 String @db.VarChar(45)
+  content               String
+  picture               String? @db.VarChar(45)
+  createddAt            DateTime @default(now()) @map("created_at")
+  creator               Admin @relation(fields: [createdBy], references: [id])
+  createdBy             Int @map("created_by")
+  comments              ArticleComments[]
+  categories            ArticlesArticlesCategories[]
+  @@map("articles")
+}
+
+model ArticleComments {
+  id                    Int @id @default(autoincrement())
+  usernmae              String @db.VarChar(45)
+  comment               String
+  createdAt            DateTime @default(now()) @map("created_at")
+  article               Article @relation(fields: [articleId], references: [id])
+  articleId             Int @map("article_id")
+  @@map("article_comments")
+}
+
+model ArticlesCategory {
+  id                    Int @id @default(autoincrement())
+  title                 String @db.VarChar(45)
+  createdAt             DateTime @default(now()) @map("created_at")
+  articles              ArticlesArticlesCategories[]
+  @@map("articles_categories")
+}
+
+model ArticlesArticlesCategories {
+  id                      Int @id @default(autoincrement())
+  article                 Article @relation(fields: [articleId], references: [id])
+  articleId               Int @map("article_id")
+  articlesCategory        ArticlesCategory @relation(fields: [articlesCategoryId], references: [id])
+  articlesCategoryId      Int @map("articles_category_ud")
+  attachedAt              DateTime @default(now()) @map("attached_at")
+  @@map("articles_articles_categories")
+}
+
+enum PermissionType {
+  SEE_ADMINS
+  MANAGE_ADMINS
+  MANAGE_ARTICLES
+}

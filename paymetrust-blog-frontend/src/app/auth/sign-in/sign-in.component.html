@@ -1,0 +1,57 @@
+<div class="container d-flex align-items-center justify-content-center">
+  <div class="card">
+    <div class="card-header">Login</div>
+    <div class="card-body">
+      <form (ngSubmit)="submit()" #signInForm="ngForm">
+        <div class="logo">
+          <img src="assets/pictures/logo.png" width="150px" alt="Logo" />
+        </div>
+        <ngb-alert *ngIf="signInViewModel.error" type="danger" (closed)="closeError()">{{ signInViewModel.errorMessage }}</ngb-alert>
+        <div class="form-floating m-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter username"
+            autocomplete="off"
+            id="sign-in-login"
+            required
+            [(ngModel)]="credentials.username"
+            name="username"
+            #username="ngModel"
+          />
+          <label for="username">Username</label>
+          <div
+            class="invalid-feedback"
+            id="sign-in-login-error"
+            *ngIf="username.invalid && username.dirty"
+          >
+            Username is required
+          </div>
+        </div>
+        <div class="form-floating m-3">
+          <input
+            type="password"
+            class="form-control"
+            id="sign-in-password"
+            placeholder="Enter password"
+            autocomplete="off"
+            required
+            [(ngModel)]="credentials.password"
+            name="password"
+            #password="ngModel"
+          />
+          <label for="password">Password</label>
+          <div
+            class="invalid-feedback"
+            id="sign-in-password-error"
+            *ngIf="password.invalid && password.dirty"
+          >
+            Password is required
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary m-3" id="sign-in-submit-button"
+        [disabled]="!signInForm.form.valid || signInViewModel.loading">Connexion</button>
+      </form>
+    </div>
+  </div>
+</div>

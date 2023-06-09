@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <form [formGroup]="roleForm">
+        <div class="form-group m-3">
+          <label for="roleName">Name</label>
+          <input
+            id="roleName"
+            class="form-control"
+            type="text"
+            formControlName="label"
+            name="roleName"
+            required
+          />
+        </div>
+
+        <div formArrayName="permissions" class="form-group m-3">
+          <label>Permissions</label>
+          <div class="form-check form-switch" *ngFor="let permission of formPermissions.controls; let i=index">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              [id]="roleFormViewModel.getPermissionIndexId(i)"
+              [formControlName]="i"
+              name="permissions"
+            />
+            <label class="form-check-label" [for]="roleFormViewModel.getPermissionIndexId(i)">
+              {{ roleFormViewModel.getPermissionIndexName(i) }}
+            </label>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" [disabled]="roleForm.invalid" (click)="submit()">
+          {{ roleFormViewModel.getActionTitle() }}
+        </button>
+
+        <button class="btn btn-secondary m-3" (click)="goBack()">
+          Go Back
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1997 @@
+{
+	"info": {
+		"_postman_id": "3e5e7dc4-b509-4f2b-b472-796c5e78ef2b",
+		"name": "paymetrust-blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2088002"
+	},
+	"item": [
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "permissions",
+					"item": [
+						{
+							"name": "permissions list",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/permissions/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"permissions",
+										"all"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/permissions/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"permissions",
+												"all"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "96"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"60-+U5/PSV3zUra9uIv3uk1wwRz9kw\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Jun 2023 21:07:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"SEE_ADMINS\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"MANAGE_ADMINS\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"MANAGE_ARTICLES\"\n    }\n]"
+								},
+								{
+									"name": "Unauthorized Bad Token",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/permissions/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"permissions",
+												"all"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "69"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"45-T7Txzr/IRLfQ4TEPfbVWLpgje4Q\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Jun 2023 21:08:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 403,\n    \"message\": \"Forbidden resource\",\n    \"error\": \"Forbidden\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "roles",
+					"item": [
+						{
+							"name": "roles list",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/roles/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles",
+										"all"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/roles/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"roles",
+												"all"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "400"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"190-2o9WoXwmBk1MVQC4ZD1xvdLx/f4\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 Jun 2023 11:09:42 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"label\": \"admin\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"username\": \"admin\"\n        },\n        \"permissions\": [\n            {\n                \"id\": 3,\n                \"name\": \"MANAGE_ARTICLES\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"MANAGE_ADMINS\"\n            },\n            {\n                \"id\": 1,\n                \"name\": \"SEE_ADMINS\"\n            }\n        ],\n        \"createdAt\": \"2023-06-07T19:52:43.549Z\"\n    },\n    {\n        \"id\": 5,\n        \"label\": \"writer\",\n        \"createdBy\": {\n            \"id\": 1,\n            \"username\": \"admin\"\n        },\n        \"permissions\": [\n            {\n                \"id\": 1,\n                \"name\": \"SEE_ADMINS\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"MANAGE_ARTICLES\"\n            }\n        ],\n        \"createdAt\": \"2023-06-07T23:54:50.438Z\"\n    }\n]"
+								},
+								{
+									"name": "Unauthorized Bad Token",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/roles/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"roles",
+												"all"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "69"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"45-T7Txzr/IRLfQ4TEPfbVWLpgje4Q\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Jun 2023 21:15:40 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 403,\n    \"message\": \"Forbidden resource\",\n    \"error\": \"Forbidden\"\n}"
+								}
+							]
+						},
+						{
+							"name": "create role",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"label\": \"writer\",\r\n    \"permissions\": [\r\n        1,\r\n        3\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/roles/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success create role",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"label\": \"writer\",\r\n    \"permissions\": [\r\n        1,\r\n        3\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/roles/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"roles",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "183"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"b7-7KBo7BLkFIWPuWE/NM9QtLwNduM\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Jun 2023 21:19:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"label\": \"writer\",\n    \"permissions\": [\n        {\n            \"id\": 3,\n            \"name\": \"MANAGE_ARTICLES\"\n        },\n        {\n            \"id\": 1,\n            \"name\": \"SEE_ADMINS\"\n        }\n    ],\n    \"createdBy\": {\n        \"id\": 1,\n        \"username\": \"admin\"\n    },\n    \"createdAt\": \"2023-06-07T21:19:46.953Z\"\n}"
+								},
+								{
+									"name": "Bad request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"label\": \"writer\",\r\n    \"permission\": [\r\n        1,\r\n        3\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/roles/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"roles",
+												"create"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "215"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"d7-K+RnKBnzLLG60vV/ez6B6ZIFE1w\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Jun 2023 21:20:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 400,\n    \"message\": [\n        \"each value in permissions must be a number conforming to the specified constraints\",\n        \"permissions must contain at least 1 elements\",\n        \"permissions must be an array\"\n    ],\n    \"error\": \"Bad Request\"\n}"
+								}
+							]
+						},
+						{
+							"name": "find one role by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/roles/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/roles/1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"roles",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "214"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"d6-RDO9YL/LwuzmKS8iaBYXkT+hSMM\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Jun 2023 21:26:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"label\": \"admin\",\n    \"permissions\": [\n        {\n            \"id\": 3,\n            \"name\": \"MANAGE_ARTICLES\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"MANAGE_ADMINS\"\n        },\n        {\n            \"id\": 1,\n            \"name\": \"SEE_ADMINS\"\n        }\n    ],\n    \"createdBy\": {\n        \"id\": 1,\n        \"username\": \"admin\"\n    },\n    \"createdAt\": \"2023-06-07T19:52:43.549Z\"\n}"
+								},
+								{
+									"name": "not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/roles/3",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"roles",
+												"3"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "40"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"28-oR73Vb/YPfDbgDgtA//MdHJasVY\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Jun 2023 21:48:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Not Found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update role",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"label\": \"manager\",\r\n    \"permissions\": [\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/roles/update/2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles",
+										"update",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"label\": \"manager\",\r\n    \"permissions\": [\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/roles/update/2",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"roles",
+												"update",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "216"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"d8-UtjAPBGl6sAGvZ/pN8eCBPbIOt4\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Jun 2023 21:50:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"label\": \"manager\",\n    \"permissions\": [\n        {\n            \"id\": 2,\n            \"name\": \"MANAGE_ADMINS\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"MANAGE_ARTICLES\"\n        },\n        {\n            \"id\": 1,\n            \"name\": \"SEE_ADMINS\"\n        }\n    ],\n    \"createdBy\": {\n        \"id\": 1,\n        \"username\": \"admin\"\n    },\n    \"createdAt\": \"2023-06-07T21:19:46.953Z\"\n}"
+								},
+								{
+									"name": "not found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"label\": \"manager\",\r\n    \"permissions\": [\r\n        1,\r\n        2,\r\n        3\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/roles/update/3",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"roles",
+												"update",
+												"3"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "40"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"28-oR73Vb/YPfDbgDgtA//MdHJasVY\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Jun 2023 22:04:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Not Found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete roles",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/roles/delete/4",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"roles",
+										"delete",
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/roles/delete/4",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"roles",
+												"delete",
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "16"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Jun 2023 22:19:41 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true\n}"
+								},
+								{
+									"name": "not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/roles/delete/4",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"roles",
+												"delete",
+												"4"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "40"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"28-oR73Vb/YPfDbgDgtA//MdHJasVY\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 07 Jun 2023 22:20:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Not Found\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "admins",
+					"item": [
+						{
+							"name": "admins list",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admins/all",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admins",
+										"all"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/admins/all",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admins",
+												"all"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "371"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"173-waSnrOe6YWrOLNsgdMZUCcrEwFs\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 Jun 2023 15:44:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 1,\n        \"username\": \"admin\",\n        \"role\": {\n            \"id\": 1,\n            \"label\": \"admin\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"username\": \"admin\"\n            },\n            \"createdAt\": \"2023-06-09T14:02:41.529Z\"\n        },\n        \"createdAt\": \"2023-06-09T14:02:41.695Z\"\n    },\n    {\n        \"id\": 2,\n        \"username\": \"jhon.writer.updated\",\n        \"role\": {\n            \"id\": 1,\n            \"label\": \"admin\",\n            \"createdBy\": {\n                \"id\": 1,\n                \"username\": \"admin\"\n            },\n            \"createdAt\": \"2023-06-09T14:02:41.529Z\"\n        },\n        \"createdAt\": \"2023-06-09T14:48:32.253Z\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "create admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"jhon.writer\",\r\n    \"password\": \"password\",\r\n    \"roleId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/admins/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admins",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"jhon.writer\",\r\n    \"password\": \"password\",\r\n    \"roleId\": 5\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/admins/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admins",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "224"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e0-CdxXDGGgGeOaAR+tfbAfCaw+Y/Q\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 Jun 2023 00:02:02 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"username\": \"jhon.writer\",\n    \"role\": {\n        \"id\": 5,\n        \"label\": \"writer\",\n        \"permissions\": [\n            {\n                \"id\": 1,\n                \"name\": \"SEE_ADMINS\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"MANAGE_ARTICLES\"\n            }\n        ],\n        \"createdBy\": {\n            \"id\": 1,\n            \"username\": \"admin\"\n        },\n        \"createdAt\": \"2023-06-07T23:54:50.438Z\"\n    }\n}"
+								},
+								{
+									"name": "role Id not found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"jhon.writer\",\r\n    \"password\": \"password\",\r\n    \"roleId\": 6\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/admins/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admins",
+												"create"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"43-++Sz4aE6g60eZitg/ynQWC0uw1w\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 Jun 2023 00:15:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 404,\n    \"message\": \"roleId not found\",\n    \"error\": \"Not Found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "find one admin by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admins/1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admins",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/admins/5",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admins",
+												"5"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "40"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"28-oR73Vb/YPfDbgDgtA//MdHJasVY\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 Jun 2023 00:22:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Not Found\"\n}"
+								},
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/admins/1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admins",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "288"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"120-hx5AHd2LzfaowsUnM3uVR3qs7R0\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 09 Jun 2023 15:46:44 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"username\": \"admin\",\n    \"role\": {\n        \"id\": 1,\n        \"label\": \"admin\",\n        \"permissions\": [\n            {\n                \"id\": 3,\n                \"name\": \"MANAGE_ARTICLES\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"MANAGE_ADMINS\"\n            },\n            {\n                \"id\": 1,\n                \"name\": \"SEE_ADMINS\"\n            }\n        ],\n        \"createdBy\": {\n            \"id\": 1,\n            \"username\": \"admin\"\n        },\n        \"createdAt\": \"2023-06-09T14:02:41.529Z\"\n    },\n    \"createdAt\": \"2023-06-09T14:02:41.529Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"jhon.writer.updated\",\r\n    \"password\": \"password\",\r\n    \"roleId\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/admins/update/2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admins",
+										"update",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"jhon.writer.updated\",\r\n    \"passwordx\": \"password\",\r\n    \"roleId\": 5\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/admins/update/2",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admins",
+												"update",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "232"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e8-9wKBT0aiHxSq0J1PrFDoR436OPE\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 Jun 2023 00:25:15 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"username\": \"jhon.writer.updated\",\n    \"role\": {\n        \"id\": 5,\n        \"label\": \"writer\",\n        \"permissions\": [\n            {\n                \"id\": 1,\n                \"name\": \"SEE_ADMINS\"\n            },\n            {\n                \"id\": 3,\n                \"name\": \"MANAGE_ARTICLES\"\n            }\n        ],\n        \"createdBy\": {\n            \"id\": 1,\n            \"username\": \"admin\"\n        },\n        \"createdAt\": \"2023-06-07T23:54:50.438Z\"\n    }\n}"
+								},
+								{
+									"name": "role id not found",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"jhon.writer\",\r\n    \"password\": \"password\",\r\n    \"roleId\": 6\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/admins/update/2",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admins",
+												"update",
+												"2"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "67"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"43-++Sz4aE6g60eZitg/ynQWC0uw1w\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 Jun 2023 00:26:35 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 404,\n    \"message\": \"roleId not found\",\n    \"error\": \"Not Found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/admins/delete/2",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"admins",
+										"delete",
+										"2"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/admins/delete/2",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admins",
+												"delete",
+												"2"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "16"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"10-oV4hJxRVSENxc/wX8+mA4/Pe4tA\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 Jun 2023 00:27:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true\n}"
+								},
+								{
+									"name": "not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/admins/delete/4",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"admins",
+												"delete",
+												"4"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "40"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"28-oR73Vb/YPfDbgDgtA//MdHJasVY\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 Jun 2023 00:27:23 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 404,\n    \"message\": \"Not Found\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "profile",
+					"item": [
+						{
+							"name": "get profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/profile",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"profile"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/profile",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"profile"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "20"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"14-JEoT7tBCfKRJPPcKFosQ20f0TZc\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 Jun 2023 10:02:56 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"username\": \"admin\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update profile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjE3MDI2NiwiZXhwIjoxNzE3NzA2MjY2fQ.mk3Zy9sTACsQ0FxufRoBdbtqOj8-wsdfBXdKLtsYr1A",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admin.update\",\r\n    \"password\": \"password\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/profile/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"profile",
+										"update"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"admin.updated\",\r\n    \"password\": \"password\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/profile/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"profile",
+												"update"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "28"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1c-uscdZPNhWPqAZW0XhlJuj7lEAKE\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 Jun 2023 10:08:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"username\": \"admin.updated\"\n}"
+								},
+								{
+									"name": "bad request",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"usernmaex\": \"admin.updated\",\r\n    \"password\": \"password\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/profile/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"profile",
+												"update"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "111"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"6f-/qdq9MhFVRBaPlYZkMMQtmCivDs\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 08 Jun 2023 10:07:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"statusCode\": 400,\n    \"message\": [\n        \"usernmae should not be empty\",\n        \"usernmae must be a string\"\n    ],\n    \"error\": \"Bad Request\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/signin",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/signin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "449"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c1-E39PFycQiVY508lXasxkP5n8EqA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 08 Jun 2023 10:55:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"profile\": {\n        \"username\": \"admin\",\n        \"role\": {\n            \"id\": 1,\n            \"label\": \"admin\",\n            \"permissions\": [\n                {\n                    \"id\": 3,\n                    \"name\": \"MANAGE_ARTICLES\"\n                },\n                {\n                    \"id\": 2,\n                    \"name\": \"MANAGE_ADMINS\"\n                },\n                {\n                    \"id\": 1,\n                    \"name\": \"SEE_ADMINS\"\n                }\n            ],\n            \"createdBy\": {\n                \"id\": 1,\n                \"username\": \"admin\"\n            },\n            \"createdAt\": \"2023-06-07T19:52:43.549Z\"\n        }\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsImlhdCI6MTY4NjIyMTczNywiZXhwIjoxNzE3NzU3NzM3fQ.J0Q2A-_HCv2vIo_jj5nRrQRf_y4LP-Jditgo7AJY4Jc\",\n    \"expiresIn\": 31536000\n}"
+						},
+						{
+							"name": "Unauthorized Bad credentials",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"admina\",\r\n    \"password\": \"admina\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/v1/auth/signin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"v1",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-hGShxOkieaAVDloBubJVM+h58D8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 07 Jun 2023 20:41:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:3000/v1",
+			"type": "string"
+		}
+	]
+}

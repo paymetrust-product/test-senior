@@ -153,28 +153,44 @@ package.json et package-lock.json : Ce sont des fichiers de configuration npm qu
 
 ### Les endpoints de l'API REST 
 **Authentification :**
-
 - POST /signin : Se connecter en fournissant les informations
-
 d'identification (username, password) dans le corps de la requête.
-POST /signup : Créer un nouveau compte utilisateur en fournissant les informations nécessaires dans le corps de la requête.
+
+- POST /signup : Créer un nouveau compte utilisateur en fournissant les informations nécessaires dans le corps de la requête.
 
 **Articles :**
-POST /articles : Créer un nouvel article en fournissant les détails de l'article dans le corps de la requête.
-GET /articles/:articleId : Récupérer un article spécifique en spécifiant son ID dans l'URL.
-PUT /articles/:articleId : Mettre à jour un article spécifique en spécifiant son ID dans l'URL et en fournissant les nouvelles données dans le corps de la requête.
-DELETE /articles/:articleId : Supprimer un article spécifique en spécifiant son ID dans l'URL.
+- POST /articles : Créer un nouvel article en fournissant les détails de l'article dans le corps de la requête.
+
+- GET /articles/:articleId : Récupérer un article spécifique en spécifiant son ID dans l'URL.
+
+- PUT /articles/:articleId : Mettre à jour un article spécifique en spécifiant son ID dans l'URL et en fournissant les nouvelles données dans le corps de la requête.
+
+- DELETE /articles/:articleId : Supprimer un article spécifique en spécifiant son ID dans l'URL.
 
 **Commentaires :**
-POST /comments : Créer un nouveau commentaire en fournissant les détails du commentaire dans le corps de la requête.
-GET /comments/:commentId : Récupérer un commentaire spécifique en spécifiant son ID dans l'URL.
-PUT /comments/:commentId : Mettre à jour un commentaire spécifique en spécifiant son ID dans l'URL et en fournissant les nouvelles données dans le corps de la requête.
-DELETE /comments/:commentId : Supprimer un commentaire spécifique en spécifiant son ID dans l'URL.
+- POST /comments : Créer un nouveau commentaire en fournissant les détails du commentaire dans le corps de la requête.
+
+- GET /comments/:commentId : Récupérer un commentaire spécifique en spécifiant son ID dans l'URL.
+
+- PUT /comments/:commentId : Mettre à jour un commentaire spécifique en spécifiant son ID dans l'URL et en fournissant les nouvelles données dans le corps de la requête.
+
+- DELETE /comments/:commentId : Supprimer un commentaire spécifique en spécifiant son ID dans l'URL.
 
 **Administration :**
-POST /admin/article : Créer un nouvel article en tant qu'administrateur en fournissant les détails de l'article dans le corps de la requête.
-PUT /admin/article : Mettre à jour un article en tant qu'administrateur en fournissant les nouvelles données dans le corps de la requête.
-DELETE /admin/article/:articleId : Supprimer un article spécifique en tant qu'administrateur en spécifiant son ID dans l'URL.
-POST /admin/user : Créer un nouvel utilisateur en tant qu'administrateur en fournissant les détails de l'utilisateur dans le corps de la requête.
-PUT /admin/user : Mettre à jour un utilisateur en tant qu'administrateur en fournissant les nouvelles données dans le corps de la requête.
-DELETE /admin/user/:userId : Supprimer un utilisateur spécifique en tant qu'administrateur en spécifiant son ID dans l'URL.
+- POST /admin/article : Créer un nouvel article en tant qu'administrateur en fournissant les détails de l'article dans le corps de la requête.
+
+- PUT /admin/article : Mettre à jour un article en tant qu'administrateur en fournissant les nouvelles données dans le corps de la requête.
+
+- DELETE /admin/article/:articleId : Supprimer un article spécifique en tant qu'administrateur en spécifiant son ID dans l'URL.
+
+- POST /admin/user : Créer un nouvel utilisateur en tant qu'administrateur en fournissant les détails de l'utilisateur dans le corps de la requête.
+
+- PUT /admin/user : Mettre à jour un utilisateur en tant qu'administrateur en fournissant les nouvelles données dans le corps de la requête.
+
+- DELETE /admin/user/:userId : Supprimer un utilisateur spécifique en tant qu'administrateur en spécifiant son ID dans l'URL.
+
+
+
+## Backend
+- compte tenu des obligations au travail et aussi le temps d'adaption du framework angular(première utilisation de se framework ), le frontend de notre blog n'est pas achévé.
+

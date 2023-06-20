@@ -17,6 +17,15 @@ export class UserRepository implements IRepositoryMethods {
     async readById(id: string) {
         return await this.source.findOneBy({id});
     }
+
+    async isMailUsed(email : string) {
+       return await this.source.countBy({email});
+    }
+
+    async readByEmail(email : string) {
+        return await this.source.findOneBy({email});
+    }
+
     async update(dto: User) {
         const articleUpdated  = await this.source.createQueryBuilder().update().set({
             firstName  : dto.firstName,

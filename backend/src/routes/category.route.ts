@@ -7,7 +7,7 @@ const categoryRoutes      = express.Router();
 const categoryController  = new CategoryController();
 /********************************************************/
 
-categoryRoutes.post("/api/category",categoryController.save);
+categoryRoutes.post("/api/category",authMiddleware,categoryController.save);
 categoryRoutes.get("/api/category",categoryController.find);
 categoryRoutes.get("/api/category/:id",categoryController.findById);
 categoryRoutes.put("/api/category",authMiddleware,categoryController.save);

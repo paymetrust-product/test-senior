@@ -6,6 +6,7 @@ import morgan from "morgan";
 import { articleRoutes } from '../routes/article.route';
 import { logger } from '../utils/logger';
 import { categoryRoutes } from '../routes/category.route';
+import authRoutes from '../routes/user.route';
 
 
 const boostraping = {
@@ -16,8 +17,8 @@ const boostraping = {
     app.use(cors());
     app.use(articleRoutes);
     app.use(categoryRoutes);
-   /* app.use(authRoutes);
-    app.use(roleRoutes);
+    app.use(authRoutes);
+   /* app.use(roleRoutes);
     app.use(partnersRoute);
     app.use(assuranceRoutes);
     app.use(offerRoutes);

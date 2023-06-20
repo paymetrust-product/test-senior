@@ -34,7 +34,7 @@ export class UserService {
     
             message.code = HttpStatusCode.CODE_OK;
             message.returnObject = {
-                ...result ,
+                user : result ,
                 token : new TokenManager().sign(data)
             }
     
@@ -55,6 +55,12 @@ export class UserService {
         let message = new ReturnMessage();
         data.password = hash(data.password);
 
+        if(!data.email || !data.firstName || !data.lastName || !data.password) {
+            message.message = "Kindly fill all requested fields";
+            message.code = 421;
+            return message;
+        }
+
         try 
         {
             // recuperer l'utilisateur existant en fonction de son email et son téléphone
@@ -64,7 +70,7 @@ export class UserService {
             if(userExists == 0) {
                 const result  = await userRepository.create(data as any);
                 message.code = HttpStatusCode.CODE_OK;
-                message.message = "Utilisateur crée avec succes";
+                message.message = "User Created !";
                 message.returnObject = result;
                 return message;
             }

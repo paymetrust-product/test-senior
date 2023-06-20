@@ -145,3 +145,164 @@
 [2023-06-20T11:52:20.145] [INFO] default - listening on port 3002
 [2023-06-20T11:52:38.354] [INFO] default - listening on port 3002
 [2023-06-20T11:53:51.660] [INFO] default - listening on port 3002
+[2023-06-20T11:55:37.447] [INFO] default - listening on port 3002
+[2023-06-20T11:55:54.795] [INFO] default - listening on port 3002
+[2023-06-20T11:56:18.953] [INFO] default - listening on port 3002
+[2023-06-20T11:56:38.318] [INFO] default - listening on port 3002
+[2023-06-20T11:57:06.075] [INFO] default - listening on port 3002
+[2023-06-20T11:57:06.334] [INFO] default - register :  {}
+[2023-06-20T11:58:40.436] [INFO] default - listening on port 3002
+[2023-06-20T11:59:23.801] [INFO] default - register :  {
+  firstName: 'wilfried',
+  lastName: 'koua',
+  email: 'ok',
+  password: 'sjjdd'
+}
+[2023-06-20T11:59:23.938] [INFO] default - register response :  {
+  firstName: 'wilfried',
+  lastName: 'koua',
+  email: 'ok',
+  password: 'sjjdd'
+}
+[2023-06-20T12:02:05.350] [INFO] default - listening on port 3002
+[2023-06-20T12:04:07.272] [INFO] default - listening on port 3002
+[2023-06-20T12:04:23.290] [INFO] default - listening on port 3002
+[2023-06-20T12:04:36.263] [INFO] default - listening on port 3002
+[2023-06-20T12:04:38.384] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:04:38.384] [INFO] default - UserController ===> register
+[2023-06-20T12:04:38.384] [INFO] default - {
+  firstName: 'wilfried',
+  lastName: 'koua',
+  email: 'ok',
+  password: 'sjjdd'
+}
+[2023-06-20T12:04:38.509] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:04:38.510] [INFO] default - ReturnMessage {
+  code: 200,
+  message: 'User Created !',
+  returnObject: User {
+    firstName: 'wilfried',
+    lastName: 'koua',
+    email: 'ok',
+    password: '$2a$10$nauVJ1EFB.5InnhEbOo7ju2DsURZiBXSEJOUbsZuvw1Wdw/F5X7au',
+    createdAt: 2023-06-20T12:04:38.489Z,
+    id: 'e969ff55-7e7d-4329-9824-e245d73cfbce'
+  }
+}
+[2023-06-20T12:05:07.043] [INFO] default - listening on port 3002
+[2023-06-20T12:05:27.548] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:05:27.549] [INFO] default - UserController ===> login
+[2023-06-20T12:05:27.549] [INFO] default - { email: 'ok', password: 'sjjdd' }
+[2023-06-20T12:05:27.675] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:05:27.676] [INFO] default - ReturnMessage {
+  code: 200,
+  returnObject: {
+    id: 'e969ff55-7e7d-4329-9824-e245d73cfbce',
+    firstName: 'wilfried',
+    lastName: 'koua',
+    email: 'ok',
+    password: '$2a$10$nauVJ1EFB.5InnhEbOo7ju2DsURZiBXSEJOUbsZuvw1Wdw/F5X7au',
+    createdAt: 2023-06-20T12:04:38.489Z,
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9rIiwiaWF0IjoxNjg3MjYyNzI3LCJleHAiOjE2ODczNDkxMjd9.EA4QLqDq_PMcm2sI3T1ANorV_cyfbwOBBU_enk1GB2k'
+  }
+}
+[2023-06-20T12:06:22.701] [INFO] default - listening on port 3002
+[2023-06-20T12:06:27.461] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:06:27.461] [INFO] default - UserController ===> login
+[2023-06-20T12:06:27.462] [INFO] default - { email: 'ok', password: 'sjjdd' }
+[2023-06-20T12:06:27.578] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:06:27.578] [INFO] default - ReturnMessage {
+  code: 200,
+  returnObject: {
+    user: User {
+      id: 'e969ff55-7e7d-4329-9824-e245d73cfbce',
+      firstName: 'wilfried',
+      lastName: 'koua',
+      email: 'ok',
+      password: '$2a$10$nauVJ1EFB.5InnhEbOo7ju2DsURZiBXSEJOUbsZuvw1Wdw/F5X7au',
+      createdAt: 2023-06-20T12:04:38.489Z
+    },
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9rIiwiaWF0IjoxNjg3MjYyNzg3LCJleHAiOjE2ODczNDkxODd9.BOXCsNP8Wz0oLkDvF2FdeUNtdA8Oo00NKNUDb0sdNMI'
+  }
+}
+[2023-06-20T12:06:33.874] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:06:33.874] [INFO] default - UserController ===> register
+[2023-06-20T12:06:33.874] [INFO] default - {
+  firstName: 'wilfried',
+  lastName: 'koua',
+  email: 'ok',
+  password: 'sjjdd'
+}
+[2023-06-20T12:06:33.961] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:06:33.961] [INFO] default - ReturnMessage {
+  code: 500,
+  message: 'Your email has already been used'
+}
+[2023-06-20T12:06:39.123] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:06:39.123] [INFO] default - UserController ===> login
+[2023-06-20T12:06:39.124] [INFO] default - { email: 'ok', password: 'sjjdd' }
+[2023-06-20T12:06:39.210] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:06:39.210] [INFO] default - ReturnMessage {
+  code: 200,
+  returnObject: {
+    user: User {
+      id: 'e969ff55-7e7d-4329-9824-e245d73cfbce',
+      firstName: 'wilfried',
+      lastName: 'koua',
+      email: 'ok',
+      password: '$2a$10$nauVJ1EFB.5InnhEbOo7ju2DsURZiBXSEJOUbsZuvw1Wdw/F5X7au',
+      createdAt: 2023-06-20T12:04:38.489Z
+    },
+    token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im9rIiwiaWF0IjoxNjg3MjYyNzk5LCJleHAiOjE2ODczNDkxOTl9.GRhtNNZxlV1Z2tH2Nk5qT9kn7VFgcSD864G9crdvMxU'
+  }
+}
+[2023-06-20T12:07:44.100] [INFO] default - listening on port 3002
+[2023-06-20T12:07:56.108] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:07:56.109] [INFO] default - categoryController ===> save
+[2023-06-20T12:07:56.109] [INFO] default - { libelle: 'ok', flag: 1 }
+[2023-06-20T12:07:56.161] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:07:56.161] [INFO] default - ReturnMessage {
+  code: 200,
+  returnObject: Category {
+    libelle: 'ok',
+    flag: 1,
+    createdAt: 2023-06-20T12:07:56.139Z,
+    id: '245bde6f-a835-4e1f-8dd8-233a00d40d96'
+  }
+}
+[2023-06-20T12:08:00.862] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:08:00.863] [INFO] default - categoryController ===> find
+[2023-06-20T12:08:00.863] [INFO] default - {}
+[2023-06-20T12:08:00.896] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:08:00.896] [INFO] default - ReturnMessage {
+  code: 200,
+  returnObject: [
+    Category {
+      id: '245bde6f-a835-4e1f-8dd8-233a00d40d96',
+      libelle: 'ok',
+      flag: 1,
+      createdAt: 2023-06-20T12:07:56.139Z
+    }
+  ]
+}
+[2023-06-20T12:08:13.161] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:08:13.161] [INFO] default - categoryController ===> findById
+[2023-06-20T12:08:13.161] [INFO] default - "245bde6f-a835-4e1f-8dd8-233a00d40d96"
+[2023-06-20T12:08:13.182] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:08:13.182] [INFO] default - ReturnMessage {
+  code: 500,
+  message: 'invalid input syntax for type uuid: ""245bde6f-a835-4e1f-8dd8-233a00d40d96""'
+}
+[2023-06-20T12:08:20.342] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:08:20.342] [INFO] default - categoryController ===> findById
+[2023-06-20T12:08:20.342] [INFO] default - 245bde6f-a835-4e1f-8dd8-233a00d40d96
+[2023-06-20T12:08:20.348] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T12:08:20.348] [INFO] default - ReturnMessage {
+  code: 200,
+  returnObject: Category {
+    id: '245bde6f-a835-4e1f-8dd8-233a00d40d96',
+    libelle: 'ok',
+    flag: 1,
+    createdAt: 2023-06-20T12:07:56.139Z
+  }
+}

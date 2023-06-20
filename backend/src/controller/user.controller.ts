@@ -3,19 +3,25 @@ import { logger } from "../utils/logger";
 
 const userService =  new UserService();
 
-export class userController {
+export class UserController {
     async login(req : any , res : any ) {
-        logger.info("login : ",req.body)
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        logger.info("UserController ===> login");
+        logger.info(req.body);
         const result =  await userService.login({...req.body});
-        logger.info("login response : " ,result)
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        logger.info(result);
         res.status(result.code).send(result);
       }
   
   
     async register(req: any ,res : any) {
-        logger.info("register : ",req.body)
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        logger.info("UserController ===> register");
+        logger.info(req.body);
         const result =  await userService.register({...req.body});
-        logger.info("register response : ",req.body)
+        logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        logger.info(result);
         res.status(result.code).send(result);
     }
 }

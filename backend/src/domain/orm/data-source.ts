@@ -9,16 +9,16 @@ export const options : DataSourceOptions & SeederOptions = {
   host: "127.0.0.1",
   type: "postgres",
   username: "postgres",
-  password: "postgres",
-  database: "paymetrust",
+  password: "root",
+  database: "postgres",
   synchronize: false,
   port : 5432,
   logging: true,
   entities: [__dirname + "./../entities/**/*.ts"],
-  migrationsTableName : "migrations",
-  migrations : [ __dirname + "./database/migrations/**/*.ts"] ,
   dropSchema : false,
-  seeds : [MainSeeder]
+  //migrationsTableName : "migrations",
+  //migrations : [ __dirname + "./database/migrations/**/*.ts"] ,
+  //seeds : [MainSeeder]
 }
 
 export const AppDataSource = new DataSource(options);

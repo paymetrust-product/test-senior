@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
+import articleRoutes from '../routes/article.route';
 
 const boostraping = {
   init: (app: any, port: number = 3001) => {
@@ -10,6 +11,7 @@ const boostraping = {
     app.use(helmet());
     app.use(bodyParser.json());
     app.use(cors());
+    app.use(articleRoutes);
    /* app.use(authRoutes);
     app.use(roleRoutes);
     app.use(partnersRoute);

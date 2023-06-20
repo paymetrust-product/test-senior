@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 export class TokenManager {
-  private token = "RassurAssurance";
+  private token = "paymetrust";
 
   sign(data)  : string {
     return jwt.sign(

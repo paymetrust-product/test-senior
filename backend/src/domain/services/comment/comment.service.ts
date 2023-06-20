@@ -10,10 +10,10 @@ export class CommentService  implements ICommentService{
        
         let message = new ReturnMessage();
 
-        if(!!comment.article || !!comment.text || !!comment.user ) {
+        if(!comment.article || !comment.text || !comment.user ) {
             message.code = HttpStatusCode.CODE_INTERNAL_SERVER_ERROR;
             message.message = "Kindly fill all requested fields";
-            return;
+            return message;
         }
 
         try {
@@ -27,11 +27,34 @@ export class CommentService  implements ICommentService{
       
           return message;
     }
-    async getAll(): Promise<ReturnMessage> {
-        throw new Error('Method not implemented.');
-    }
-    async getById(id: string): Promise<ReturnMessage> {
-        throw new Error('Method not implemented.');
-    }
+
+    
+    async getAll() {
+        let message = new ReturnMessage();
+        try {
+          const result = await commentRepository.read();
+          message.code = 200;
+          message.returnObject = result;
+        } catch (Exception) {
+          message.code = HttpStatusCode.CODE_INTERNAL_SERVER_ERROR;
+          message.message = Exception.message;
+        }
+    
+        return message;
+      }
+    
+      async getById(id: string) {
+        let message = new ReturnMessage();
+        try {
+          const result = await commentRepository.readById(id);
+          message.code = 200;
+          message.returnObject = result;
+        } catch (Exception) {
+          message.code = HttpStatusCode.CODE_INTERNAL_SERVER_ERROR;
+          message.message = Exception.message;
+        }
+    
+        return message;
+      }
     
 }

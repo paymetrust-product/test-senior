@@ -63,3 +63,84 @@
 [2023-06-20T11:07:31.692] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 [2023-06-20T11:07:31.693] [INFO] default - ReturnMessage { code: 200, returnObject: [] }
 [2023-06-20T11:08:49.746] [INFO] default - listening on port 3002
+[2023-06-20T11:09:35.375] [INFO] default - listening on port 3002
+[2023-06-20T11:10:54.043] [INFO] default - listening on port 3002
+[2023-06-20T11:11:47.012] [INFO] default - listening on port 3002
+[2023-06-20T11:14:44.824] [INFO] default - listening on port 3002
+[2023-06-20T11:16:31.551] [INFO] default - listening on port 3002
+[2023-06-20T11:17:03.185] [INFO] default - listening on port 3002
+[2023-06-20T11:17:55.623] [INFO] default - listening on port 3002
+[2023-06-20T11:18:18.512] [INFO] default - listening on port 3002
+[2023-06-20T11:18:35.251] [INFO] default - listening on port 3002
+[2023-06-20T11:19:55.469] [INFO] default - listening on port 3002
+[2023-06-20T11:21:16.515] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:21:16.515] [INFO] default - categoryController ===> find
+[2023-06-20T11:21:16.515] [INFO] default - {}
+[2023-06-20T11:21:16.536] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:21:16.536] [INFO] default - ReturnMessage { code: 200, returnObject: [] }
+[2023-06-20T11:21:21.996] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:21:21.996] [INFO] default - categoryController ===> findById
+[2023-06-20T11:21:21.996] [INFO] default - :id
+[2023-06-20T11:21:22.005] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:21:22.005] [INFO] default - ReturnMessage {
+  code: 500,
+  message: 'invalid input syntax for type uuid: ":id"'
+}
+[2023-06-20T11:22:14.120] [INFO] default - listening on port 3002
+[2023-06-20T11:22:17.826] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:22:17.826] [INFO] default - categoryController ===> findById
+[2023-06-20T11:22:17.826] [INFO] default - :id
+[2023-06-20T11:22:17.840] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:22:17.840] [INFO] default - ReturnMessage {
+  code: 500,
+  message: 'invalid input syntax for type uuid: ":id"'
+}
+[2023-06-20T11:22:19.326] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:22:19.326] [INFO] default - categoryController ===> findById
+[2023-06-20T11:22:19.326] [INFO] default - :id
+[2023-06-20T11:22:19.334] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:22:19.334] [INFO] default - ReturnMessage {
+  code: 500,
+  message: 'invalid input syntax for type uuid: ":id"'
+}
+[2023-06-20T11:22:22.386] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:23:21.982] [INFO] default - listening on port 3002
+[2023-06-20T11:23:27.419] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:26:26.056] [INFO] default - listening on port 3002
+[2023-06-20T11:26:28.961] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:26:28.962] [INFO] default - categoryController ===> save
+[2023-06-20T11:26:28.962] [INFO] default - { libelle: 'ok', flag: 1 }
+[2023-06-20T11:26:28.963] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:26:28.963] [INFO] default - ReturnMessage {
+  code: 500,
+  message: 'Kindly fill all requested fields'
+}
+[2023-06-20T11:27:40.421] [INFO] default - listening on port 3002
+[2023-06-20T11:27:44.058] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:27:44.058] [INFO] default - categoryController ===> save
+[2023-06-20T11:27:44.058] [INFO] default - { libelle: 'ok', flag: 1 }
+[2023-06-20T11:27:44.114] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:27:44.114] [INFO] default - ReturnMessage {
+  code: 200,
+  returnObject: Category {
+    libelle: 'ok',
+    flag: 1,
+    createdAt: 2023-06-20T11:27:44.063Z,
+    id: '1cb235fc-fae9-4efb-8956-8d3cbfa80835'
+  }
+}
+[2023-06-20T11:30:00.654] [INFO] default - listening on port 3002
+[2023-06-20T11:31:30.109] [INFO] default - listening on port 3002
+[2023-06-20T11:32:27.272] [INFO] default - listening on port 3002
+[2023-06-20T11:34:44.958] [INFO] default - listening on port 3002
+[2023-06-20T11:35:07.920] [INFO] default - listening on port 3002
+[2023-06-20T11:35:30.817] [INFO] default - listening on port 3002
+[2023-06-20T11:38:23.540] [INFO] default - listening on port 3002
+[2023-06-20T11:38:33.840] [INFO] default - listening on port 3002
+[2023-06-20T11:41:48.985] [INFO] default - listening on port 3002
+[2023-06-20T11:44:56.109] [INFO] default - listening on port 3002
+[2023-06-20T11:47:09.842] [INFO] default - listening on port 3002
+[2023-06-20T11:48:17.909] [INFO] default - listening on port 3002
+[2023-06-20T11:50:45.739] [INFO] default - listening on port 3002
+[2023-06-20T11:52:20.145] [INFO] default - listening on port 3002
+[2023-06-20T11:52:38.354] [INFO] default - listening on port 3002

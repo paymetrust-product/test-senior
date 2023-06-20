@@ -36,10 +36,10 @@ export class ArticleService implements IArticleService {
   async addArticle(article: ArticleDto): Promise<ReturnMessage> {
     let message = new ReturnMessage();
 
-    if(!!article.category || !!article.text || !!article.title || !!article.user) {
+    if(!article.category || !article.text || !article.title || !article.user) {
       message.code = HttpStatusCode.CODE_INTERNAL_SERVER_ERROR;
       message.message = "Kindly fill all requested fields";
-      return;
+      return message;
     }
 
     try {

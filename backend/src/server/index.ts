@@ -5,6 +5,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import { articleRoutes } from '../routes/article.route';
 import { logger } from '../utils/logger';
+import { categoryRoutes } from '../routes/category.route';
 
 
 const boostraping = {
@@ -14,6 +15,7 @@ const boostraping = {
     app.use(bodyParser.json());
     app.use(cors());
     app.use(articleRoutes);
+    app.use(categoryRoutes);
    /* app.use(authRoutes);
     app.use(roleRoutes);
     app.use(partnersRoute);

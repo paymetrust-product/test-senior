@@ -9,6 +9,8 @@ export class User  {
     lastName : string;
     @Column({nullable : true})
     email : string;
+    @Column({nullable : true})
+    password ?: string;
     @CreateDateColumn({nullable : true}) 
     createdAt : Date;
 }

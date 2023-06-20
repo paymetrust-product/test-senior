@@ -16,9 +16,9 @@ export const options : DataSourceOptions & SeederOptions = {
   logging: true,
   entities: [__dirname + "./../entities/**/*.ts"],
   dropSchema : false,
-  //migrationsTableName : "migrations",
-  //migrations : [ __dirname + "./database/migrations/**/*.ts"] ,
-  //seeds : [MainSeeder]
+  migrationsTableName : "migrations",
+  migrations : [ __dirname + "./database/migrations/**/*.ts"] ,
+  seeds : [MainSeeder]
 }
 
 export const AppDataSource = new DataSource(options);

@@ -3,5 +3,6 @@ export interface ArticleDto {
     text     ?: string,
     user     ?: string,
     category ?: string,
-    id       ?: string
+    id       ?: string,
+    image    ?: string
 }

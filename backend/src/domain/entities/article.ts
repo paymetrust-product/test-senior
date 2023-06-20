@@ -15,5 +15,7 @@ export class Article  {
     user : User; 
     @ManyToOne(()=>Category)
     category : Category;
+    @Column({nullable : true})
+    image ?: string;
 
 }

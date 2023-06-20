@@ -24,7 +24,7 @@ export class ArticleRepository implements IRepositoryMethods{
           user     : dto.user,
           text     : dto.text,
           title    : dto.title,
-          category : dto.category
+          category : dto.category,
         }).where("id = :id",{id : dto.id}).execute();
         return articleUpdated;
     }

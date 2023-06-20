@@ -3,7 +3,9 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
-import articleRoutes from '../routes/article.route';
+import { articleRoutes } from '../routes/article.route';
+import { logger } from '../utils/logger';
+
 
 const boostraping = {
   init: (app: any, port: number = 3001) => {
@@ -31,7 +33,7 @@ const boostraping = {
       );
       next();
     });
-   
+    app.listen(port, () => logger.info(`listening on port ${port}`));
   },
 };
 

@@ -1,4 +1,4 @@
-import { BaseEntity } from "typeorm";
+
 export interface IRepositoryMethods<T = any> {
   create(dto: T);
   read();

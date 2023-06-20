@@ -1,0 +1,65 @@
+[2023-06-20T10:06:23.309] [INFO] default - listening on port 3002
+[2023-06-20T10:08:40.351] [INFO] default - listening on port 3002
+[2023-06-20T10:08:48.869] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T10:09:47.474] [INFO] default - listening on port 3002
+[2023-06-20T10:10:08.034] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T10:10:08.035] [INFO] default - {}
+[2023-06-20T10:10:08.070] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T10:10:08.070] [INFO] default - ReturnMessage { code: 200, returnObject: [] }
+[2023-06-20T10:11:29.967] [INFO] default - listening on port 3002
+[2023-06-20T10:11:33.321] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T10:11:33.321] [INFO] default - {}
+[2023-06-20T10:11:33.352] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T10:11:33.353] [INFO] default - ReturnMessage {
+  code: 500,
+  message: 'invalid input syntax for type uuid: "10"'
+}
+[2023-06-20T10:14:58.694] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T10:14:58.695] [INFO] default - {}
+[2023-06-20T10:14:58.737] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T10:14:58.738] [INFO] default - ReturnMessage {
+  code: 500,
+  message: 'invalid input syntax for type uuid: "10"'
+}
+[2023-06-20T10:14:59.749] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T10:14:59.750] [INFO] default - {}
+[2023-06-20T10:14:59.806] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T10:14:59.806] [INFO] default - ReturnMessage {
+  code: 500,
+  message: 'invalid input syntax for type uuid: "10"'
+}
+[2023-06-20T10:19:30.501] [INFO] default - listening on port 3002
+[2023-06-20T10:19:44.615] [INFO] default - listening on port 3002
+[2023-06-20T10:20:54.348] [INFO] default - listening on port 3002
+[2023-06-20T10:22:30.146] [INFO] default - listening on port 3002
+[2023-06-20T10:25:05.798] [INFO] default - listening on port 3002
+[2023-06-20T10:25:28.899] [INFO] default - listening on port 3002
+[2023-06-20T10:39:04.806] [INFO] default - listening on port 3002
+[2023-06-20T10:41:00.768] [INFO] default - listening on port 3002
+[2023-06-20T10:45:55.987] [INFO] default - listening on port 3002
+[2023-06-20T10:46:57.153] [INFO] default - listening on port 3002
+[2023-06-20T10:47:06.729] [INFO] default - listening on port 3002
+[2023-06-20T10:47:47.647] [INFO] default - listening on port 3002
+[2023-06-20T10:49:55.650] [INFO] default - listening on port 3002
+[2023-06-20T11:01:12.373] [INFO] default - listening on port 3002
+[2023-06-20T11:01:23.812] [INFO] default - listening on port 3002
+[2023-06-20T11:02:46.771] [INFO] default - listening on port 3002
+[2023-06-20T11:03:03.664] [INFO] default - listening on port 3002
+[2023-06-20T11:04:45.383] [INFO] default - listening on port 3002
+[2023-06-20T11:05:45.343] [INFO] default - listening on port 3002
+[2023-06-20T11:05:56.369] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:05:56.370] [INFO] default - ArticleController ===> Find
+[2023-06-20T11:05:56.370] [INFO] default - {}
+[2023-06-20T11:05:56.406] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:05:56.406] [INFO] default - ReturnMessage {
+  code: 500,
+  message: 'column Article.image does not exist'
+}
+[2023-06-20T11:06:57.619] [INFO] default - listening on port 3002
+[2023-06-20T11:07:23.374] [INFO] default - listening on port 3002
+[2023-06-20T11:07:31.679] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:07:31.681] [INFO] default - ArticleController ===> Find
+[2023-06-20T11:07:31.681] [INFO] default - {}
+[2023-06-20T11:07:31.692] [INFO] default - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+[2023-06-20T11:07:31.693] [INFO] default - ReturnMessage { code: 200, returnObject: [] }
+[2023-06-20T11:08:49.746] [INFO] default - listening on port 3002

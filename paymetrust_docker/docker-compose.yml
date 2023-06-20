@@ -1,0 +1,13 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  database:
+    build:
+      dockerfile: Dockerfile
+      context: ./db   
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - "ENV DOCKER_HOSTNAME=127.0.0.1"
+    image: postgres
+    container_name: PaymeTrust
+    

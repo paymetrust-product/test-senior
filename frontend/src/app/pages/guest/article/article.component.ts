@@ -13,7 +13,6 @@ export class ArticleComponent implements OnInit {
   article : any;
   id ?: string ;
 
-
   constructor(private router : ActivatedRoute) {
 
   }

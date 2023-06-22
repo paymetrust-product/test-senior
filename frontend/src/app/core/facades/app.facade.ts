@@ -19,6 +19,10 @@ export class AppFacade {
     return  this.appFunction.getArticles();
   }
 
+  getArticle(id : string) {
+    return this.appFunction.getArticle(id);
+  }
+
   login(data:any) {
    // data.password =  shajs('sha256').update(data.password).digest('hex');
     //return this.appFunction.login(data);

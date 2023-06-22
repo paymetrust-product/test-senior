@@ -5,6 +5,8 @@ import { RouterModule } from '@angular/router';
 import { CategoryItemComponent } from '../components/widgets/category-item/category-item.component';
 import { CategoryListComponent } from '../components/widgets/category-list/category-list.component';
 import { CommonModule } from '@angular/common';
+import { ArticleListComponent } from '../components/widgets/article-list/article-list.component';
+import { ArticleItemComponent } from '../components/widgets/article-item/article-item.component';
 
 
 @NgModule({
@@ -13,13 +15,17 @@ import { CommonModule } from '@angular/common';
     NavbarComponent,
     FooterComponent,
     CategoryItemComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    ArticleListComponent,
+    ArticleItemComponent
   ],
   exports : [
     NavbarComponent,
     FooterComponent,
     CategoryItemComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    ArticleListComponent,
+    ArticleItemComponent
   ]
 })
 export class ComponentModule {

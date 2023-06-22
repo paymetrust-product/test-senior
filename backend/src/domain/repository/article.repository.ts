@@ -16,10 +16,10 @@ export class ArticleRepository implements IRepositoryMethods{
         return await this.source.save(article);
     }
     async read() {
-       return await this.source.find({relations:["category","user"]});
+       return await this.source.find({relations:["category","user"],order : {id:'DESC'}});
     }
     async readById(id: string) {
-        return await this.source.findOneBy({id});
+        return await this.source.findOne({where : {id},relations:["category","user"]});
     }
     async update(dto: Article) {
         const articleUpdated  = await this.source.createQueryBuilder().update().set({

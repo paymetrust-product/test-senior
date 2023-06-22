@@ -19,4 +19,9 @@ export class AppFunctionService {
     return this.api.get(`api/article`).pipe(shareReplay(1));
   }
 
+  getArticle(id : string) {
+    this.api.setApiType("rest");
+    return this.api.get(`api/article/`+ id).pipe(shareReplay(1));
+  }
+
 }

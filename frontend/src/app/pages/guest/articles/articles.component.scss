@@ -2,6 +2,7 @@
   .main_container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center !important;
 
     .sidebar{
       height: 100vh;
@@ -19,6 +20,10 @@
       width: 80% !important ;
       .card {
         margin-top: 3%;
+        margin : 0px 20px !important;
+      }
+      .article{
+        width: 110% !important;
       }
     }
   }
@@ -48,6 +53,9 @@
       margin-left: 10% !important;
       .card {
         width: 100% !important;
+      }
+      .article{
+        width: 90% !important;
       }
     }
   }

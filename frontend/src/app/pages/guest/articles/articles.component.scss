@@ -1,0 +1,25 @@
+.wrapper{
+  .main_container {
+    display: flex;
+
+    .sidebar{
+      height: 100vh;
+      max-width: 300px;
+      background-color: white;
+      width: 20%;
+      margin-top: 3%;
+      .card {
+        border-top:  3px solid dodgerblue;
+        margin-top: 2% !important;
+      }
+    }
+
+    .content {
+      width: 80% !important ;
+      margin-top: 1%;
+      .card {
+        margin-top: 3%;
+      }
+    }
+  }
+}

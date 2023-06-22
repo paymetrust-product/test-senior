@@ -1,0 +1,42 @@
+import { Component, OnInit, inject } from '@angular/core';
+import { AppFacade } from 'src/app/core/facades/app.facade';
+import { category } from 'src/app/core/interfaces/types';
+
+@Component({
+  selector: 'app-articles',
+  templateUrl: './articles.component.html',
+  styleUrls: ['./articles.component.scss'],
+})
+export class ArticlesComponent implements OnInit {
+  private appFacades = inject(AppFacade);
+  categories?: category[];
+  articles ?: any[];
+
+  ngOnInit(): void {
+    this.loadCategory();
+  }
+
+  loadCategory() {
+    this.appFacades.getCategories().subscribe({
+      next: (response: any) => {
+        console.log(response);
+        this.categories = response.returnObject as category[];
+        this.loadArticles();
+      },
+      error(err) {
+        console.log(err);
+      },
+    });
+  }
+
+  loadArticles() {
+    this.appFacades.getArticles().subscribe({
+      next: (response: any) => {
+        console.log(response);
+      },
+      error(err) {
+        console.log(err);
+      },
+    });
+  }
+}

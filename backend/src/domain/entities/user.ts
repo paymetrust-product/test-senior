@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Role } from "./role";
 @Entity({name : "User"})
 export class User  {
     @PrimaryGeneratedColumn("uuid")
@@ -11,6 +12,9 @@ export class User  {
     email : string;
     @Column({nullable : true})
     password ?: string;
+    @ManyToOne(()=> Role)
+    @JoinColumn()
+    public role : string;
     @CreateDateColumn({nullable : true}) 
     createdAt : Date;
 }

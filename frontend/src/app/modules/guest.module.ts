@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { ArticlesComponent } from './../pages/guest/articles/articles.component';
 import { ArticleComponent } from './../pages/guest/article/article.component';
 import { NgModule } from '@angular/core';
@@ -8,7 +9,7 @@ import { ServiceModule } from './service.module';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports : [CommonModule,GuestRoutesModule,ComponentModule,HttpClientModule,ServiceModule],
+  imports : [CommonModule,GuestRoutesModule,RouterModule,ComponentModule,HttpClientModule,ServiceModule],
   declarations : [ArticleComponent,ArticlesComponent]
 })
 export class GuestModule {

@@ -1,3 +1,5 @@
+import { User } from './../entities/user';
+import { Category } from './../entities/categorie';
 
 import { AppDataSource } from '../orm/data-source';
 import { Article } from './../entities/article';
@@ -14,7 +16,7 @@ export class ArticleRepository implements IRepositoryMethods{
         return await this.source.save(article);
     }
     async read() {
-       return await this.source.find();
+       return await this.source.find({relations:["category","user"]});
     }
     async readById(id: string) {
         return await this.source.findOneBy({id});

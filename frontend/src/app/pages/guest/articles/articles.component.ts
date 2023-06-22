@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, HostListener, OnInit, inject } from '@angular/core';
 import { AppFacade } from 'src/app/core/facades/app.facade';
 import { category } from 'src/app/core/interfaces/types';
 
@@ -8,9 +8,15 @@ import { category } from 'src/app/core/interfaces/types';
   styleUrls: ['./articles.component.scss'],
 })
 export class ArticlesComponent implements OnInit {
+
   private appFacades = inject(AppFacade);
   categories?: category[];
   articles ?: any[];
+  pageY: number = 0;
+
+  @HostListener('window:scroll', ['$event']) onScrollEvent($event: any) {
+    this.pageY = window.pageYOffset;
+  }
 
   ngOnInit(): void {
     this.loadCategory();
@@ -33,6 +39,7 @@ export class ArticlesComponent implements OnInit {
     this.appFacades.getArticles().subscribe({
       next: (response: any) => {
         console.log(response);
+        this.articles = response.returnObject;
       },
       error(err) {
         console.log(err);

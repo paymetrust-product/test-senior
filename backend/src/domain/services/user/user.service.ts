@@ -50,6 +50,20 @@ export class UserService {
     }
 
 
+    async getUserById(id : string) {
+        let message = new ReturnMessage();
+        try {
+            message.code = HttpStatusCode.CODE_OK;
+            message.returnObject = await userRepository.readById(id);
+        }catch(Exception) {
+            message.code = 500;
+            message.message = Exception.message;
+            return message;
+        }
+        return message;
+    }
+
+
     async register(data : userDto) {
 
         let message = new ReturnMessage();

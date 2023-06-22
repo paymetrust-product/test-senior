@@ -3,7 +3,7 @@ import { logger } from "../utils/logger";
 
 const  commentService = new CommentService();
 
-export class commentController {
+export class CommentController {
     async save(req : any ,res :any) {
         logger.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         logger.info("commentController ===> save");

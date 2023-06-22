@@ -1,6 +1,6 @@
 export interface commentDto {
-  id?: string;
-  text?: string;
-  article?: string;
-  user?: string;
+  id      ?: string;
+  text    ?: string;
+  article ?: string;
+  user    ?: string;
 }

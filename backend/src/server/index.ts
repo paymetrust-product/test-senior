@@ -7,6 +7,7 @@ import { articleRoutes } from '../routes/article.route';
 import { logger } from '../utils/logger';
 import { categoryRoutes } from '../routes/category.route';
 import authRoutes from '../routes/user.route';
+import { commentRoutes } from '../routes/comment.route';
 
 
 const boostraping = {
@@ -18,6 +19,7 @@ const boostraping = {
     app.use(articleRoutes);
     app.use(categoryRoutes);
     app.use(authRoutes);
+    app.use(commentRoutes);
    /* app.use(roleRoutes);
     app.use(partnersRoute);
     app.use(assuranceRoutes);

@@ -1,5 +1,5 @@
 export interface categoryDto {
-    id?: string ;
+    id      ?: string ;
     libelle ?: string;
-    flag ?: string;
+    flag    ?: string;
 }

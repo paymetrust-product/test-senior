@@ -24,7 +24,7 @@ export class RoleCreatedSeed implements Seeder {
 
         const roles = [{...admin} , {...member},{...customer}];
 
-        console.log(roles);
+        
 
         roles.forEach((role) =>  {
             roleRepository.findOneBy({

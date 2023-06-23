@@ -25,12 +25,12 @@ export class ArticlesComponent implements OnInit {
   loadCategory() {
     this.appFacades.getCategories().subscribe({
       next: (response: any) => {
-        console.log(response);
+
         this.categories = response.returnObject as category[];
         this.loadArticles();
       },
       error(err) {
-        console.log(err);
+
       },
     });
   }
@@ -38,11 +38,11 @@ export class ArticlesComponent implements OnInit {
   loadArticles() {
     this.appFacades.getArticles().subscribe({
       next: (response: any) => {
-        console.log(response);
+
         this.articles = response.returnObject;
       },
       error(err) {
-        console.log(err);
+
       },
     });
   }

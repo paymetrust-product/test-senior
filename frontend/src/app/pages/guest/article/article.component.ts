@@ -36,11 +36,11 @@ export class ArticleComponent implements OnInit {
   loadArticle() {
     this.appFacades.getArticle(this.id as string).subscribe({
       next: (response: any) => {
-        console.log(response);
+
         this.article = response.returnObject;
       },
       error(err) {
-        console.log(err);
+
       },
     });
   }
@@ -54,12 +54,12 @@ export class ArticleComponent implements OnInit {
       })
       .subscribe({
         next: (response: any) => {
-          console.log(response);
+
           this.article = response.returnObject;
           this.utils.successToastMessage("Comment successfully added");
         },
         error(err) {
-          console.log(err);
+
         },
       });
   }

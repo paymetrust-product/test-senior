@@ -13,7 +13,7 @@ export class NavbarComponent implements OnInit {
   isConnected : boolean = false;
   ngOnInit(): void {
     this.isConnected  = this.state.isConnected();
-    console.log(this.isConnected);
+
   }
   logout(){
     this.state.logout();

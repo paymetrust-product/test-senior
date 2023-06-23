@@ -18,7 +18,6 @@ export class DefaultUser {
   }
 
   getUser() {
-    console.log("this.userService.User",this.userService.user)
     return (!!this.userService.user ) ? this.userService.user : defaultUserState();
   }
 }

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1687345034830" clover="3.2.0">
+  <project timestamp="1687345034830" name="All files">
+    <metrics statements="17" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="7" elements="27" coveredelements="21" complexity="0" loc="17" ncloc="17" packages="2" files="3" classes="3"/>
+    <package name="repositories">
+      <metrics statements="9" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+      <file name="user.repository.ts" path="/Users/macbookpro15pouces/Documents/projets/perso/test-senior/test-senior/backend/src/domain/repositories/user.repository.ts">
+        <metrics statements="9" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="3"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="use-cases.user">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="create-user.ts" path="/Users/macbookpro15pouces/Documents/projets/perso/test-senior/test-senior/backend/src/domain/use-cases/user/create-user.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="get-all-user.ts" path="/Users/macbookpro15pouces/Documents/projets/perso/test-senior/test-senior/backend/src/domain/use-cases/user/get-all-user.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

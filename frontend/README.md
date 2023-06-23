@@ -2,6 +2,10 @@
 
 Il s'agit de la partie front-end de l'application. Elle est développée en Angular.
 
+#  Aperçu
+
+![Aperçu](Documentation/img.png)
+
 # Structure du projet
 
 Le projet est structuré de la manière suivante :

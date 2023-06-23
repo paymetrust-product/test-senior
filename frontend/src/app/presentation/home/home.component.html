@@ -4,7 +4,7 @@
       <div class="article" *ngFor="let article of news">
         <a [routerLink]="['/article', article.id]" class="title">{{article.title}}</a>
         <img class="thumbnail"
-             src="https://code.visualstudio.com/assets/docs/languages/cpp/hello-world-exe.png" alt="">
+             src="{{article.url}}" alt="">
         <p>
           {{article.content}}
         </p>

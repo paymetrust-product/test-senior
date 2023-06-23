@@ -1,16 +1,21 @@
+
 import { HttpHeaders } from "@angular/common/http";
+
 
 export class HttpHeaderBuilder  {
 
   private newHeader !: Required<{key : string , value : string | string[] }>;
   private header !: HttpHeaders ;
+  private token !: string;
 
   constructor() {
+
     this.header =  new HttpHeaders({
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST, GET, OPTIONS, PUT,DELETE',
       'Accept': 'application/json',
+
     });
 
   }

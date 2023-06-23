@@ -7,10 +7,11 @@ import { CategoryListComponent } from '../components/widgets/category-list/categ
 import { CommonModule } from '@angular/common';
 import { ArticleListComponent } from '../components/widgets/article-list/article-list.component';
 import { ArticleItemComponent } from '../components/widgets/article-item/article-item.component';
+import { ServiceModule } from './service.module';
 
 
 @NgModule({
-  imports : [RouterModule,CommonModule],
+  imports : [RouterModule,CommonModule,ServiceModule],
   declarations: [
     NavbarComponent,
     FooterComponent,

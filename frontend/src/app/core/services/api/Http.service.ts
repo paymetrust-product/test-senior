@@ -1,14 +1,16 @@
 
 
 import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
+import { Injectable, inject } from "@angular/core";
 import { HttpHeaderBuilder } from '../../builders/Header.builder';
 import { environment } from "src/environment/env.prod";
+import { UserQuery } from "src/app/store/user$/user.query";
 
 @Injectable()
 export class HttpService {
 
   apiType : string = "rest";
+  private userQuery : UserQuery = inject(UserQuery);
 
   constructor(private http : HttpClient) {
 
@@ -48,6 +50,7 @@ export class HttpService {
 
   httpHeader() {
     return  new HttpHeaderBuilder()
+    .addHeader({key:'Authorization' , value : `Bearer ${this.userQuery.User?.token?.toString()}`})
     .build();
    ;
   }

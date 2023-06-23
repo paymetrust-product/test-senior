@@ -36,6 +36,7 @@
         "reflect-metadata": "^0.1.13",
         "swagger-jsdoc": "^6.2.8",
         "swagger-ui-express": "^4.3.0",
+        "sweetalert2": "^11.7.12",
         "typeorm": "^0.3.7",
         "typeorm-extension": "^2.1.5"
     },

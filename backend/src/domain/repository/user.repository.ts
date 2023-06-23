@@ -31,6 +31,7 @@ export class UserRepository implements IRepositoryMethods {
             firstName  : dto.firstName,
             lastName   : dto.lastName,
             email      : dto.email,
+            role       : dto.role
           }).where("id = :id",{id : dto.id}).execute();
           return articleUpdated;
     }

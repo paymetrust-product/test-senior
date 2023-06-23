@@ -7,9 +7,10 @@ import { ComponentModule } from './component.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceModule } from './service.module';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports : [CommonModule,GuestRoutesModule,RouterModule,ComponentModule,HttpClientModule,ServiceModule],
+  imports : [FormsModule,CommonModule,GuestRoutesModule,RouterModule,ComponentModule,HttpClientModule,ServiceModule],
   declarations : [ArticleComponent,ArticlesComponent]
 })
 export class GuestModule {

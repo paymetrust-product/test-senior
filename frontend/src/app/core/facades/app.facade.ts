@@ -19,13 +19,17 @@ export class AppFacade {
     return  this.appFunction.getArticles();
   }
 
+
   getArticle(id : string) {
     return this.appFunction.getArticle(id);
   }
 
+  addComment(commentDto  : any) {
+    return this.appFunction.addComment(commentDto);
+  }
+
   login(data:any) {
-   // data.password =  shajs('sha256').update(data.password).digest('hex');
-    //return this.appFunction.login(data);
+    return this.appFunction.login(data);
   }
 
   register(data :any) {

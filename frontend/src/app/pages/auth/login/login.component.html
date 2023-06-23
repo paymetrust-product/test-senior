@@ -1,1 +1,25 @@
-<p>login works!</p>
+<div class="wrapper">
+  <div class="container">
+    <div class="card mt-5">
+      <div class="card-body">
+        <br>
+        <br>
+        <h4 class="text-center">Sign In </h4>
+        <br>
+        <br>
+        <div>
+          <label>email (*)</label>
+          <input class="form-control" type="email" [(ngModel)]="login.email">
+        </div>
+        <div>
+          <label>Password (*)</label>
+          <input class="form-control" type="password" [(ngModel)]="login.password">
+        </div>
+        <br>
+        <br>
+        <button type="button" class="btn btn-info col-md-12" (click)="SignIn()"> Se connecter</button>
+
+      </div>
+    </div>
+  </div>
+</div>

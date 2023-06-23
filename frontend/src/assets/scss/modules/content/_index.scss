@@ -1,0 +1,7 @@
+.content {
+  @apply w-full  mt-10 flex flex-auto;
+  @import "article";
+  @import "article_detail";
+}
+
+

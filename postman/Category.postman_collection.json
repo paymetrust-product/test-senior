@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "888e8fea-99d6-4882-88cf-bbccc9d98b37",
+		"name": "Category",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25286538"
+	},
+	"item": [
+		{
+			"name": "Add new category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "ADD CATEGORY",
+					"host": [
+						"ADD CATEGORY"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/category",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get category by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/category/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"category",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

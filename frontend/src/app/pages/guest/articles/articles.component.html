@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+
+<section class="container-fluid wrapper">
+  <div class="main_container">
+    <div class="sidebar">
+      <div class="container" [ngClass]="(pageY > 200)  ? 'fixed' : 'not-fixed'">
+        <app-category-list [categories]="categories"></app-category-list>
+      </div>
+    </div>
+    <div class="content">
+      <h4 class="text-center mt-4">Articles <b class="badge badge-info">{{articles?.length}}</b></h4>
+      <div class="article">
+        <div class="article_content">
+          <div class="container text-center">
+            <app-article-list [articles]="articles"></app-article-list>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

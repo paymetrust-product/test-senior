@@ -1,0 +1,19 @@
+<div class="card">
+  <img class="card-img-top"
+    src="{{!!article.image ? article.image : 'https://t4.ftcdn.net/jpg/02/17/89/41/360_F_217894165_H4jRalQ4eg9Kp8XUVGEa7XFDEPtTQ9PY.jpg'}}"
+    class="img-fluid">
+  <div class="card-body">
+    <div class="grid">
+      <div class="row">
+        <div class="col-md-12">
+          <b class="badge badge-info">{{article?.category?.libelle}}</b>
+          <h3>{{article.title}}</h3>
+          <p>{{article.text.slice(0,5)}}...</p>
+          <button class="btn btn-outline-info col-md-12" routerLink="/guest/article/{{article?.id}}">Read Article</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

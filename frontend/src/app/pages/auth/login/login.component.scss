@@ -1,0 +1,28 @@
+.card{
+  width: 40%;
+  height: 70vh;
+  margin-top: 5% !important;
+  position: absolute;
+}
+
+
+
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: rgb(3, 127, 198);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  //margin-top: -5%;
+}
+
+@media(min-width:0px) and (max-width:900px) {
+  .card {
+    width: 80%;
+    height: 70vh;
+    position: absolute;
+    margin-left: 5%;
+  }
+}

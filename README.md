@@ -1,30 +1,58 @@
-Ceci est un test technique pour des développeurs Senior. Le test se déroule en deux phases
-un test backend et un test frontend. Vous pouvez `fork` le projet et ensuite faire un `PR` quand vous
-aurez terminé
+# Demarage du projet
+## Backend
 
-# Test Backend
+Le backend de ce projet a été fait en Node JS (Express) couplé avec l' ORM  TypeORM
 
-Vous devez concevoir `une API RestFull` pour notre blog en NodeJs en `architecture hexagonal`.
+Exécutez la commande `npm` à la racine du projet backend pour installer les dépendances du projet.
 
-Nous devons pouvoir créer un article, le supprimer, le consulter et le mettre à jour
+### lancement du container 
+deplacer vous dans le dossier paymetrust_docker  et executer la commande suivante dans votre terminale : 
+```
+docker compose up
+```
+### lancement de la base de donnée
 
-- Les articles peuvent appartenir à une ou plusieurs catégories
-- Nous devons pouvoir commenter les articles
-- Un ou plusieurs articles peuvent appartenir à un utilisateur
+1. Vous avez la possibilié de pouvoir configurer votre base dans le dossier orm situé dans le domain
 
-## Bonus
+2. Afin de pouvoir avoir de la donnée predefini veuillez executer la commande suivante :
+```
+npm run seed
+```
 
-- Ajouter un système d'authentification **JWT**
-- Utiliser une base de données **POSTGRESQL**
-- Ajout d'image
+3. Un utilisateur sera crée  :
 
-# Test Frontend
+```
+Email: user@gmail.com
+password: 1234
+```
 
-Vous devez faire l'intégration de l'API développé précédemment. Nous souhaitons que vous utilisiez le `framework Angular` tout en respectant `la clean architecture`.
-Vous pouvez utiliser `Talwindcss` ou `Bootstrap` pour le style.
+### Démarrer le projet Backend
+Vous pouvez maintenant démarrer le projet backend en mode de développement avec la commande suivante :
+```
+npm run  start
+```
+L'application backend sera accessible via l'URL suivante : http://localhost:3002 🚀
 
-## Bonus
+## Frontend
 
-- Authentification
-- Panel Administrateur
-- Gestion des rôles et permissions
+L'application a été fait avec le framework Angular
+
+Suivez les étapes suivantes pour le démarrer en mode développement.
+
+1. Commencez par installer les dépendances en exécutant la commande suivante **à la racine du projet** :
+```
+npm install
+```
+
+2. Une fois les dépendances installées, exécutez la commande suivante **à la racine du projet** pour le démarrer :
+```
+npm start
+```
+L'application frontend sera alors accessible via le lien suivant : http://localhost:4200 🚀
+
+# Ressources
+
+1. Des collections postmans sont disponibles dans le dossier postman a la racine du projet afin de mieux tester les API
+
+
+

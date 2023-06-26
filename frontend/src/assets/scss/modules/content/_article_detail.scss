@@ -1,0 +1,23 @@
+& .article-detail {
+  @apply px-10 flex flex-col justify-center justify-items-center items-center;
+
+  & .article {
+    @apply overflow-hidden flex flex-col justify-center justify-items-center items-center;
+
+    & h1 {
+      @apply text-5xl font-bold text-gray-800 py-5;
+    }
+
+    & .thumbnail {
+      @apply h-80 bg-cover bg-center;
+    }
+
+    & p {
+      @apply text-gray-600 text-lg text-justify;
+    }
+
+    & .btn-next {
+      @apply text-gray-300  no-underline uppercase text-xs hover:text-orange-400;
+    }
+  }
+}

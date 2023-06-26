@@ -1,0 +1,18 @@
+<div class="header">
+  <div class="header-top">
+    <a [routerLink]="['/']">
+      <img class="header-top-logo" src="/assets/svg/material.svg" alt="">
+    </a>
+  </div>
+  <div class="header-bottom">
+    <ul class="header-bottom-ul">
+      <li class="header-bottom-li"><a [routerLink]="['/user/signup']">📑 Inscription</a></li>
+      <!-- affichage des categories -->
+      <li class="header-bottom-li" *ngFor="let category of categories"><a href="#">{{category.name}}</a></li>
+    </ul>
+  </div>
+</div>
+<!-- content -->
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

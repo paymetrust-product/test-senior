@@ -1,0 +1,25 @@
+<ng-template [ngIf]="!loading">
+  <div class="article-list" *ngIf="news.length>0">
+    <div>
+      <div class="article" *ngFor="let article of news">
+        <a [routerLink]="['/article', article.id]" class="title">{{article.title}}</a>
+        <img class="thumbnail"
+             src="{{article.url}}" alt="">
+        <p>
+          {{article.content}}
+        </p>
+        <a [routerLink]="['/article', article.id]" class="btn-next">Lire la suite</a>
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div *ngIf="news.length === 0" class="text-center">
+    <p class="text-center text-xl">Aucune donnée disponible pour l'instant , veuillez réactualiser la page.</p>
+  </div>
+</ng-template>
+
+<ng-template [ngIf]="loading">
+  <app-loading></app-loading>
+</ng-template>
+
